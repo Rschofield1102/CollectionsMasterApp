@@ -21,7 +21,7 @@ namespace CollectionsMasterConsoleUI
             //TODO: Print the first number of the array
             Console.WriteLine($"{number[0]}");
             //TODO: Print the last number of the array            
-            Console.WriteLine($"{number[50]}");  //---- OR--- number[number.Length -1]
+            Console.WriteLine($"{number[49]}");  //---- OR--- number[number.Length -1]   // number[49]  because index always starts at 49
             Console.WriteLine("All Numbers Original");
             //UNCOMMENT this method to print out your numbers from arrays or lists
             NumberPrinter(number);
@@ -32,13 +32,23 @@ namespace CollectionsMasterConsoleUI
             /*  1) First way, using a custom method => Hint: Array._____(); 
                 2) Second way, Create a custom method (scroll to bottom of page to find ⬇⬇⬇)
             */
-
+            /////-------
+            ///---------
+            ///---------
+            ///---------
+            ///----------
+            
             Console.WriteLine("All Numbers Reversed:");
+            //Array.Reverse(number);
+            //NumberPrinter(number);
 
             Console.WriteLine("---------REVERSE CUSTOM------------");
 
             Console.WriteLine("-------------------");
-
+            //--------------
+            //--------------
+            //--------------
+            //-------------
             //TODO: Create a method that will set numbers that are a multiple of 3 to zero then print to the console all numbers
             Console.WriteLine("Multiple of three = 0: ");
             ThreeKiller(number);
@@ -82,7 +92,7 @@ namespace CollectionsMasterConsoleUI
             do
             {
                 Console.WriteLine("What number will you search for in the number list?");
-                isANumber = int.TryParse(Console.ReadLine(), out userNumber);
+                isANumber  = int.TryParse(Console.ReadLine(), out  userNumber);
             } while (isANumber == false);
 
             NumberChecker(myList, userNumber);
@@ -124,7 +134,7 @@ namespace CollectionsMasterConsoleUI
 
         private static void ThreeKiller(int[] numbers)
         {
-            for( int i = 3; i <= numbers.Length; i++)
+            for( int i = 3; i < numbers.Length; i++)// has to be less than, can not also be equal to so <
             {
                 if (numbers[i] %3==0)
                 {
@@ -177,6 +187,8 @@ namespace CollectionsMasterConsoleUI
                 var number = rng.Next(0, 50);
                 numberList.Add(number);
             }
+
+            
             NumberPrinter(numberList);
 
         }
@@ -196,7 +208,16 @@ namespace CollectionsMasterConsoleUI
         {
             Array.Reverse(array);
             NumberPrinter(array);
-
+            //------ORRRR
+            //int[] newArray = new int[50];
+            //int index = 0; //--------------------------------------
+            //for (int i = array.Length-1; i>=0;i--)              |
+            //{                                                   |
+            //    newArray[index] = array[i]; // create a new index above to place index at 0
+            //    index++; //----add index++ so it increases,
+            //}
+            //    Number Printer(newArray); // call the method
+            //---------
         }
         
         
