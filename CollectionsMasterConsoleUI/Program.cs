@@ -109,7 +109,28 @@ namespace CollectionsMasterConsoleUI
 
             //TODO: Create a method that will remove all odd numbers from the list then print results
             Console.WriteLine("Evens Only!!");
+            
+            Console.WriteLine("--------");
+
+
+
+
+
+
+
+
+            //numberList
             OddKiller(myList);
+            //NumberPrinter(myList);  ///////
+                                    /////
+
+
+
+
+
+
+
+
 
             Console.WriteLine("------------------");
 
@@ -147,20 +168,38 @@ namespace CollectionsMasterConsoleUI
 
         }
 
+
+
+
+
+
+
+
+
         private static void OddKiller(List<int> numberList)
         {
-            for (int i =  numberList.Count; i>=0; i--)
+            Console.WriteLine("------");
+            for (int i =numberList.Count -1; i >=0; i--)
             {
                 if (numberList[i] % 2 != 0)
                 {
 
-                    numberList.Remove(numberList[i]);
+                    numberList.RemoveAt(i);
                 }
 
             }
 
             NumberPrinter(numberList);
+            Console.WriteLine("------");
         }
+
+
+
+
+
+
+
+
 
         private static void NumberChecker(List<int> numberList, int searchNumber)
         {
